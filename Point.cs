@@ -39,12 +39,27 @@ namespace ClassesAndObjectsTask1
         }
 
         // Метод, перемещающий точку на плоскости на вектор (a, b).
-        public void MovingPoint()
+        public void MovingPoint(int a, int b)
         {
-
+            x += a;
+            y += b;
+            Console.WriteLine("({0},{1}) - координаты точки после ее перемещения на вектор ({2},{3})", x, y, a, b);
         }
 
         // Свойство, позволяющее получить-установить координаты точки (доступные для чтения и записи).
+        public int X
+        {
+            get { return x; }
+
+            set { x = value; }
+        }
+
+        public int Y
+        {
+            get { return y; }
+
+            set { y = value; }
+        }
 
         // Свойство, позволяющее умножить координаты точки на скаляр (доступное только для записи).
 

@@ -37,11 +37,13 @@ namespace ClassesAndObjectsTask1
             Point a = new Point();
             a.ShowСoordinates();
             a.CalculateDistance();
+            a.MovingPoint(7, 8);
             Console.WriteLine();
 
             Point b = new Point(-8, 6);
             b.ShowСoordinates();
             b.CalculateDistance();
+            b.MovingPoint(7,8);
 
             Console.ReadKey();
         }
