@@ -35,15 +35,15 @@ namespace ClassesAndObjectsTask1
         static void Main()
         {
             Point a = new Point();
-            a.ShowСoordinates();
-            a.CalculateDistance();
-            a.MovingPoint(7, 8);
+            Console.WriteLine(a);
+            Console.WriteLine(a.CalculateDistance());
+            Console.WriteLine(a.MovingPoint(7,8));
             Console.WriteLine();
 
             Point b = new Point(-8, 6);
-            b.ShowСoordinates();
-            b.CalculateDistance();
-            b.MovingPoint(7,8);
+            Console.WriteLine(b);
+            Console.WriteLine(b.CalculateDistance());
+            Console.WriteLine(b.MovingPoint(7, 8));
 
             Console.ReadKey();
         }

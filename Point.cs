@@ -26,42 +26,38 @@ namespace ClassesAndObjectsTask1
         }
 
         // Метод, выводящий координаты точки на экран.
-        public void ShowСoordinates()
-        {
-            Console.WriteLine("Координаты точки: ({0},{1})", x, y);
-        }
+        public override string ToString() => "Координаты точки: (" + x + "," + y + ")";
 
         // Метод, расчитывающий расстояние от начала координат до точки.
-        public void CalculateDistance()
+        public string CalculateDistance()
         {
             double dist = Math.Sqrt(Math.Pow(x, 2) + Math.Pow(y, 2));
-            Console.WriteLine("Расстояние от начала координат до точки ({0},{1}): {2}", x, y, dist);
+            return $"Расстояние от начала координат до точки ({x},{y}): {dist}";
         }
 
         // Метод, перемещающий точку на плоскости на вектор (a, b).
-        public void MovingPoint(int a, int b)
+        public string MovingPoint(int a, int b)
         {
             x += a;
             y += b;
-            Console.WriteLine("({0},{1}) - координаты точки после ее перемещения на вектор ({2},{3})", x, y, a, b);
+            return $"({x},{y}) - координаты точки после ее перемещения на вектор ({a},{b})";
         }
 
         // Свойство, позволяющее получить-установить координаты точки (доступные для чтения и записи).
         public int X
         {
-            get { return x; }
-
-            set { x = value; }
+            get => x;
+            set => x = value;
         }
 
         public int Y
         {
-            get { return y; }
-
-            set { y = value; }
+            get => y;
+            set => y = value;
         }
 
         // Свойство, позволяющее умножить координаты точки на скаляр (доступное только для записи).
+
 
         // Индексатор, позволяющий по индексу 0 обращаться к полю x, по индексу 1 - к полю y, 
         // при других значениях индекса выдается сообщение об ошибке.
