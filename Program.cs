@@ -34,6 +34,16 @@ namespace ClassesAndObjectsTask1
     {
         static void Main()
         {
+            Point a = new Point();
+            a.ShowСoordinates();
+            a.CalculateDistance();
+            Console.WriteLine();
+
+            Point b = new Point(-8, 6);
+            b.ShowСoordinates();
+            b.CalculateDistance();
+
+            Console.ReadKey();
         }
     }
 }
