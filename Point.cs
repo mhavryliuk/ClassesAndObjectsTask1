@@ -113,9 +113,6 @@ namespace ClassesAndObjectsTask1
         }
 
         // Перегрузка операции бинарный +: одновременно добавляет к полям x и y значение скаляра.
-        public static Point operator +(Point point, int scalar)
-        {
-            return new Point(point.x + scalar, point.y + scalar);
-        }
+        public static Point operator +(Point point, int scalar) => new Point(point.x + scalar, point.y + scalar);
     }
 }
