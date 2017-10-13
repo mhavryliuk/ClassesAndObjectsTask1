@@ -22,7 +22,7 @@ namespace ClassesAndObjectsTask1
         }
 
         // Метод, выводящий координаты точки на экран.
-        public override string ToString() => "Координаты точки: (" + x + "," + y + ")";
+        public override string ToString() => $"Координаты точки: ({x},{y})";
 
         // Метод, расчитывающий расстояние от начала координат до точки.
         public string CalculateDistance()
@@ -70,13 +70,13 @@ namespace ClassesAndObjectsTask1
             {
                 if (i == 0)
                 {
-                    return $"Индекс [0] соответствует координате x: {x}";
+                    return $"Индекс [{i}] соответствует координате x: {x}";
                 }
                 else
                 {
                     if(i==1)
                     {
-                        return $"Индекс [1] соответствует координате y: {y}";
+                        return $"Индекс [{i}] соответствует координате y: {y}";
                     }
                     else
                     {
@@ -113,6 +113,9 @@ namespace ClassesAndObjectsTask1
         }
 
         // Перегрузка операции бинарный +: одновременно добавляет к полям x и y значение скаляра.
-        public static Point operator +(Point point, int scalar) => new Point(point.x + scalar, point.y + scalar);
+        public static Point operator +(Point point, int scalar)
+        {
+            return new Point(point.x + scalar, point.y + scalar);
+        }
     }
 }
