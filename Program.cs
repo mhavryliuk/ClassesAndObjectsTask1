@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 /*
 Классы и Объекты.
@@ -35,15 +31,38 @@ namespace ClassesAndObjectsTask1
         static void Main()
         {
             Point a = new Point();
+            Console.WriteLine(a);                                        // Метод, выводящий начальные координаты точки
+            if (a)                                                       // Проверка на совпадение значений координат
+                Console.WriteLine("Значение координат x и y совпадает");
+            else Console.WriteLine("Значение координат x и y не совпадает");
+            Console.WriteLine(a.CalculateDistance());                    // Метод, рассчитывающий расстояние
+            Console.WriteLine(a.MovingPoint(7,8));                       // Метод, перемещающий точку
+            Console.WriteLine(a[0]);                                     // Обращение к координатам по индексу
+            Console.WriteLine(a[1]);
+            Console.WriteLine(a[2]);
+            Console.Write("Операция постфиксного инкремента: ", a++);    // Перегрузка операции ++
             Console.WriteLine(a);
-            Console.WriteLine(a.CalculateDistance());
-            Console.WriteLine(a.MovingPoint(7,8));
+            Console.Write("Операция постфиксного декремента: ", a--);    // Перегрузка операции --
+            Console.WriteLine(a);
+            Console.WriteLine(a+50);                                     // Добавление к координатам значения скаляра
+
             Console.WriteLine();
 
             Point b = new Point(-8, 6);
             Console.WriteLine(b);
+            if (b)
+                Console.WriteLine("Значение координат x и y совпадает");
+            else Console.WriteLine("Значение координат x и y не совпадает");
             Console.WriteLine(b.CalculateDistance());
             Console.WriteLine(b.MovingPoint(7, 8));
+            Console.WriteLine(b[0]);
+            Console.WriteLine(b[1]);
+            Console.WriteLine(b[2]);
+            Console.Write("Операция постфиксного инкремента: ", b++);
+            Console.WriteLine(b);
+            Console.Write("Операция постфиксного декремента: ", b--);
+            Console.WriteLine(b);
+            Console.WriteLine(b + 50);
 
             Console.ReadKey();
         }
